@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(135deg, #0a0f29, #1a2b49);
+    color: #fff;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: #0a0f29;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+
+.navbar nav {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar nav a {
+    padding: 10px 15px;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.navbar nav a:hover {
+    background: #4cafee;
+    border-radius: 5px;
+}
+
+.navbar .btn {
+    padding: 10px 20px;
+    background: #4cafee;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.navbar .btn:hover {
+    transform: scale(1.1);
+}
+
+
+.heading {
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    padding: 60px 40px;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.text-content {
+    max-width: 600px;
+    text-align: left;
+}
+
+.text-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.text-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #aaa;
+}
+
+.primary-btn {
+    background: #4cafee;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.primary-btn:hover {
+    transform: scale(1.1);
+}
+
+.search-bar {
+    padding: 15px;
+    width: 100%;
+    max-width: 400px;
+    border: 2px solid #4cafee;
+    border-radius: 5px;
+    background: #1a2b49;
+    color: #fff;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.search-bar::placeholder {
+    color: #aaa;
+}
+
+
+.image-container img {
+    max-width: 200px;
+    border: 2px solid #4cafee;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 40px auto;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.feature {
+    background: #1a2b49;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    max-width: 300px;
+    flex: 1;
+    transition: transform 0.3s ease;
+}
+
+.feature:hover {
+    transform: scale(1.05);
+}
+
+.feature h3 {
+    font-size: 1.5rem;
+    color: #4cafee;
+    margin-bottom: 10px;
+}
+
+.feature p {
+    font-size: 1rem;
+    color: #aaa;
+}
+

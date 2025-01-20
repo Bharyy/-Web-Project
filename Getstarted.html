@@ -1,0 +1,139 @@
+<html>
+<head>
+    <title>Sign Up - SmartPKM</title>
+    <style>
+    
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1f82e4;
+        }
+
+        .navbar {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar .logo {
+            font-size: 1.5rem;
+        }
+
+        .navbar nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 15px;
+        }
+
+        .navbar a.btn {
+            background-color: #2b83e7;
+            border-radius: 5px;
+        }
+
+        .signup-container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .signup-container h1 {
+            margin-bottom: 20px;
+        }
+
+        .signup-container label {
+            display: block;
+            margin-bottom: 5px;
+            text-align: left;
+        }
+
+        .signup-container input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .signup-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #2186eb;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .signup-container button:hover {
+            background-color: #e65a00;
+        }
+    </style>
+    
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">SmartPKM</div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="signup.html" class="btn">Sign Up</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="signup-container">
+            <h1>Create Your Account</h1>
+            <form action="submit_signup" method="post" onsubmit="return validateForm(this)">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+    </main>
+    <script>
+        function validateForm(form) {
+            let username = form.username.value;
+            if (!/^[a-zA-Z]{3,}$/.test(username)) {
+                alert("Username should contain at least 3 alphabets and no numbers or special characters");
+                return false;
+            }
+
+            let email = form.email.value;
+            if (!/^[a-zA-Z0-9]+@gitam\.in$/.test(email)) {
+                alert("Email should be in format username@gitam.in");
+                return false;
+            }
+
+            let password = form.password.value;
+            if (!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/.test(password)) {
+                alert("Password should be at least 8 characters with at least one uppercase, lowercase, number and special character");
+                return false;
+            }
+
+            alert("Form submitted successfully!");
+            return true;
+        }
+    </script>
+</body>
+</html>
